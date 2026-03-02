@@ -1,9 +1,26 @@
+# Jaedyn Lee – Personal Website
+
 My personal website, which was very fun to design and populate with reflections of my experiences.
 
-This branch contains the source code for the build in `master`.
+This branch contains the source code for the build in `master`. Push updates to this branch and run `npm run deploy` to publish changes to GitHub Pages.
 
-I used [this](https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka) tutorial for hosting a React app with GitHub pages. 
+## Run locally
 
-Push updates to `source` branch and run `yarn deploy` to publish changes.
+```bash
+npm install
+npm start
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Opens the app at [http://localhost:3000](http://localhost:3000).
+
+## Deploy
+
+```bash
+npm run deploy
+```
+
+Builds the app and publishes the `build` folder to the `master` branch (GitHub Pages).
+
+---
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Hosting setup was inspired by [this tutorial](https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka) for React on GitHub Pages.
