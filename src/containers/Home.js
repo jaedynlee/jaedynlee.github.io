@@ -20,54 +20,54 @@ import projects from '../content/projects'
 import AboutCard from '../components/AboutCard'
 
 class Home extends React.Component {
-	constructor(props) {
-		super(props)
+  constructor(props) {
+    super(props)
 
-		this.state = {
-			darkMode: false,
-		}
-	}
+    this.state = {
+      darkMode: false,
+    }
+  }
 
   onDarkModeToggle = () => {
-    this.setState({darkMode: !this.state.darkMode});
+    this.setState({ darkMode: !this.state.darkMode });
     document.body.classList.toggle('bg-dark')
   };
 
   render = () => (
-    <Container className={`px-md-0 py-5 ${this.state.darkMode ? 'text-light' : 'text-dark'}`}>
+    <Container className={`px-6 px-md-0 py-5 ${this.state.darkMode ? 'text-light' : 'text-dark'}`}>
       <div id='dark-mode-toggle' className='text-right'>
         <Button variant="link" onClick={this.onDarkModeToggle} className='mode-toggle' title={this.state.darkMode ? 'Light mode' : 'Dark mode'}>
-          <FontAwesomeIcon id='sun' icon={faSun} className={this.state.darkMode ? 'inactive-icon' : 'active-icon'}/>
+          <FontAwesomeIcon id='sun' icon={faSun} className={this.state.darkMode ? 'inactive-icon' : 'active-icon'} />
           <FontAwesomeIcon icon={faMoon} className={this.state.darkMode ? 'active-icon' : 'inactive-icon'} />
         </Button>
       </div>
       <Row>
         <Col md='4' className='px-md-0'>
           <div id='about' className='sticky-top'>
-            <AboutCard darkMode={this.state.darkMode}/>
+            <AboutCard darkMode={this.state.darkMode} />
           </div>
         </Col>
 
         <Col md='8' className='pl-md-0 pl-md-5'>
           <h4 className='section-title pt-0'>
-            <FontAwesomeIcon icon={faLaptopCode}/>
+            <FontAwesomeIcon icon={faLaptopCode} />
             <span className='pl-3'>experience</span>
           </h4>
           {renderMilestones(milestones)}
 
           <h4 className='section-title'>
-            <FontAwesomeIcon icon={faGraduationCap}/>
+            <FontAwesomeIcon icon={faGraduationCap} />
             <span className='pl-3'>education</span>
           </h4>
           <Milestone milestone={education[0]} id={0} />
           <div className='small'>
             <div>
               <span className='font-weight-bold'>Honors: </span>
-                Summa Cum Laude, Honors College, Clinton Global Initiative University Invitee
+              Summa Cum Laude, Honors College, Clinton Global Initiative University Invitee
             </div>
             <div>
               <span className='font-weight-bold'>Coursework: </span>
-              Web Development, Software Development, Object-Oriented Design, 
+              Web Development, Software Development, Object-Oriented Design,
               Algorithms, Networks and Distributed Systems, Computer Systems,
               Programming Languages, <span> </span>
               <a target='blank' href='https://docs.google.com/document/d/1vXNKrYmwo23BwM5wD77obiHc4_FFxH5WtO88Qt_BNfY/edit?usp=sharing'>
@@ -84,16 +84,16 @@ class Home extends React.Component {
           </div>
 
           <h4 className='section-title'>
-            <FontAwesomeIcon icon={faUsers}/>
+            <FontAwesomeIcon icon={faUsers} />
             <span className='pl-3'>leadership</span>
           </h4>
           {renderMilestones(leadership)}
 
           <h4 className='section-title'>
-            <FontAwesomeIcon icon={faUserCog}/>
+            <FontAwesomeIcon icon={faUserCog} />
             <span className='pl-3'>skills</span>
           </h4>
-          {skills.map(s => 
+          {skills.map(s =>
             <div key={s.title} className='pb-3'>
               <span className='font-weight-bold'>{s.title}: </span>
               {s.skills.join(', ')}
@@ -101,7 +101,7 @@ class Home extends React.Component {
           )}
 
           <h4 className='section-title'>
-            <FontAwesomeIcon icon={faCode}/>
+            <FontAwesomeIcon icon={faCode} />
             <span className='pl-3'>projects</span>
           </h4>
           {renderProjects(projects)}
@@ -111,20 +111,19 @@ class Home extends React.Component {
     </Container>
   )
 }
-  
+
 const renderMilestones = milestones => {
   let i = 0
-  return milestones.map(m => 
-    <Milestone milestone={m} id={i++} key={m.company} />         
+  return milestones.map(m =>
+    <Milestone milestone={m} id={i++} key={m.company} />
   )
 }
 
 const renderProjects = projects => {
   let i = 0
-  return projects.map(p => 
-    <Project project={p} id={i++} key={p.title} />         
+  return projects.map(p =>
+    <Project project={p} id={i++} key={p.title} />
   )
 }
 
 export default Home;
-  

@@ -1,6 +1,19 @@
 const milestones =
     [
         {
+            "company": "Lumos",
+            "location": "Remote",
+            "duration": "Aug 2024 - Present",
+            "roles": [
+                {
+                    "title": "Senior Software Engineer",
+                    "description": [
+                        "Building User Access Reviews!",
+                    ],
+                },
+            ],
+        },
+        {
             "company": "Indigo Ag",
             "location": "Boston, MA",
             "duration": "Aug 2020 - May 2024",
