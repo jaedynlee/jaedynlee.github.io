@@ -15,23 +15,23 @@ const AboutCard = ({ darkMode }) => {
     return (
         <Card className="mb-3" bg={darkMode ? 'dark' : 'white'} border={darkMode ? 'secondary' : ''}>
             <Card.Body>
-                <h2 className='mb-3 pl-1'>Jaedyn Lee</h2>
+                <h2 className='mb-3 ps-1'>Jaedyn Lee</h2>
                 <div className={`mb-1 ${textColor}`}>
                     <FontAwesomeIcon icon={faMapMarkerAlt} />
-                    <span className='pl-2'>Arlington, VA, USA</span>
+                    <span className='ps-2'>Arlington, VA, USA</span>
                 </div>
 
                 <div className='mb-1'>
                     <Card.Link className={textColor} href='https://github.com/jaedynlee' target='blank'>
                         <FontAwesomeIcon icon={faGithub} />
-                        <span className='pl-2'>github.com/jaedynlee</span>
+                        <span className='ps-2'>github.com/jaedynlee</span>
                     </Card.Link>
                 </div>
 
                 <div className='mb-1'>
                     <Card.Link className={textColor} href='https://linkedin.com/in/jaedynlee' target='blank'>
                         <FontAwesomeIcon icon={faLinkedin} />
-                        <span className='pl-2'>linkedin.com/in/jaedynlee</span>
+                        <span className='ps-2'>linkedin.com/in/jaedynlee</span>
                     </Card.Link>
                 </div>
             </Card.Body>

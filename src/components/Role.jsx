@@ -21,13 +21,13 @@ class Role extends React.Component {
                 <Button
                     aria-controls={this.props.id}
                     aria-expanded={open}
-                    className='px-0 text-left'
+                    className='px-0 text-start'
                     onClick={() => this.setState({ open: !open })}
                     size='sm'
                     variant='link'
                 >
                     <FontAwesomeIcon
-                        className='pr-2'
+                        className='pe-2'
                         icon={open ? faChevronDown : faChevronRight}
                         size="sm"
                         width={10}

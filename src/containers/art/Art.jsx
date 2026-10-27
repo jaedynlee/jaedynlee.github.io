@@ -6,7 +6,7 @@ import ArtworkCard from '../../components/ArtworkCard';
 import concentrationContent from '../../content/concentration';
 import breadthContent from '../../content/breadth';
 import './art.css';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router";
 
 
 const Art = () => {  
@@ -25,7 +25,7 @@ const Art = () => {
                 <Col sm="10">
                     <h4 className='section-title'>
                         <FontAwesomeIcon icon={faPaintBrush}/>
-                        <span className='pl-3'>art</span>
+                        <span className='ps-3'>art</span>
                     </h4>  
                 </Col>
             </Row>
@@ -38,7 +38,7 @@ const Art = () => {
                     <p>
                         12 pieces belong to a concentration, a sustained investigation of a particular 2-D Design concern.
                     </p>
-                    <p className="font-italic">
+                    <p className="fst-italic">
                         “We cannot understand [the universe] if we do not first learn the language 
                         and grasp the symbols in which it is written. [It] is written in the mathematical 
                         language, and the symbols are triangles, circles and other geometrical figures, 
@@ -64,7 +64,7 @@ const Art = () => {
                         The remaining 12 pieces belong to a breadth portfolio, a variety of works 
                         demonstrating understanding of 2-D Design issues.
                     </p>
-                    <p className="font-italic">
+                    <p className="fst-italic">
                         “A work of art is, above all, an adventure of the mind.” -Eugene Ionesco
                     </p>
                     <div id="artworks">

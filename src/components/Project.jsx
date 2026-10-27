@@ -20,18 +20,18 @@ class Project extends React.Component {
                 <Button
                     variant='link'
                     size='sm'
-                    className='px-0 text-left'
+                    className='px-0 text-start'
                     onClick={() => this.setState({ open: !open })}
                     aria-controls={this.props.id}
                     aria-expanded={open}
                 >
                     <FontAwesomeIcon
-                        className='pr-2'
+                        className='pe-2'
                         icon={open ? faChevronDown : faChevronRight}
                         size="sm"
                         width={10}
                     />
-                    <span className='font-weight-bold'>
+                    <span className='fw-bold'>
                         {this.props.project.title}
                     </span> - {this.props.project.description}
                 </Button>

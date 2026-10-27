@@ -35,7 +35,7 @@ class Home extends React.Component {
 
   render = () => (
     <Container className={`px-6 px-md-0 py-5 ${this.state.darkMode ? 'text-light' : 'text-dark'}`}>
-      <div id='dark-mode-toggle' className='text-right'>
+      <div id='dark-mode-toggle' className='text-end'>
         <Button variant="link" onClick={this.onDarkModeToggle} className='mode-toggle' title={this.state.darkMode ? 'Light mode' : 'Dark mode'}>
           <FontAwesomeIcon id='sun' icon={faSun} className={this.state.darkMode ? 'inactive-icon' : 'active-icon'} />
           <FontAwesomeIcon icon={faMoon} className={this.state.darkMode ? 'active-icon' : 'inactive-icon'} />
@@ -48,25 +48,25 @@ class Home extends React.Component {
           </div>
         </Col>
 
-        <Col md='8' className='pl-md-0 pl-md-5'>
+        <Col md='8' className='ps-md-0 ps-md-5'>
           <h4 className='section-title pt-0'>
             <FontAwesomeIcon icon={faLaptopCode} />
-            <span className='pl-3'>experience</span>
+            <span className='ps-3'>experience</span>
           </h4>
           {renderMilestones(milestones)}
 
           <h4 className='section-title'>
             <FontAwesomeIcon icon={faGraduationCap} />
-            <span className='pl-3'>education</span>
+            <span className='ps-3'>education</span>
           </h4>
           <Milestone milestone={education[0]} id={0} />
           <div className='small'>
             <div>
-              <span className='font-weight-bold'>Honors: </span>
+              <span className='fw-bold'>Honors: </span>
               Summa Cum Laude, Honors College, Clinton Global Initiative University Invitee
             </div>
             <div>
-              <span className='font-weight-bold'>Coursework: </span>
+              <span className='fw-bold'>Coursework: </span>
               Web Development, Software Development, Object-Oriented Design,
               Algorithms, Networks and Distributed Systems, Computer Systems,
               Programming Languages, <span> </span>
@@ -79,30 +79,30 @@ class Home extends React.Component {
           </div>
           <Milestone milestone={education[1]} id={1} />
           <div className='small'>
-            <span className='font-weight-bold'>Activities: </span>
+            <span className='fw-bold'>Activities: </span>
             Tae Kwon Do (Black Belt), Varsity Volleyball (MVP), A Cappella
           </div>
 
           <h4 className='section-title'>
             <FontAwesomeIcon icon={faUsers} />
-            <span className='pl-3'>leadership</span>
+            <span className='ps-3'>leadership</span>
           </h4>
           {renderMilestones(leadership)}
 
           <h4 className='section-title'>
             <FontAwesomeIcon icon={faUserCog} />
-            <span className='pl-3'>skills</span>
+            <span className='ps-3'>skills</span>
           </h4>
           {skills.map(s =>
             <div key={s.title} className='pb-3'>
-              <span className='font-weight-bold'>{s.title}: </span>
+              <span className='fw-bold'>{s.title}: </span>
               {s.skills.join(', ')}
             </div>
           )}
 
           <h4 className='section-title'>
             <FontAwesomeIcon icon={faCode} />
-            <span className='pl-3'>projects</span>
+            <span className='ps-3'>projects</span>
           </h4>
           {renderProjects(projects)}
 

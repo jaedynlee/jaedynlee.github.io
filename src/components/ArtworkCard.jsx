@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from "prop-types"
 
 export default function ArtworkCard({ title, media, file }) {
   return (
@@ -10,8 +9,3 @@ export default function ArtworkCard({ title, media, file }) {
   );
 }
 
-ArtworkCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  media: PropTypes.string.isRequired,
-  file: PropTypes.string.isRequired
-};

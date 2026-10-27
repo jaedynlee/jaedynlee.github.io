@@ -2,8 +2,8 @@ import React from 'react';
 import {
   HashRouter as Router,
   Route,
-  Switch,
-} from "react-router-dom";
+  Routes,
+} from "react-router";
 import ScrollToTop from './ScrollToTop';
 import './App.css';
 
@@ -14,13 +14,12 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <Router>
-      <ScrollToTop>
-        <Switch>
-          <Route exact={true} path="/" component={Home} />
-          <Route exact={true} path="/art" component={Art} />
-          <Route component={NotFound} />
-        </Switch>
-      </ScrollToTop>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/art" element={<Art />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }

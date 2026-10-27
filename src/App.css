@@ -96,6 +96,11 @@ h1, h2, h3, h4 {
 a,
 .btn-link {
   color: var(--primary);
+  text-decoration: none;
+}
+a:hover,
+.btn-link:hover {
+  text-decoration: underline;
 }
 .text-light a,
 .text-light .btn-link {

@@ -5,10 +5,10 @@ const Milestone = ({ id, milestone }) => (
   <>
     <div className={id !== 0 ? "row pt-4" : "row"}>
       <div className="col-sm-auto">
-        <span className="font-weight-bold">{milestone.company}</span> -{" "}
+        <span className="fw-bold">{milestone.company}</span> -{" "}
         {milestone.location}
       </div>
-      <small className="col text-sm-right font-italic">
+      <small className="col text-sm-end fst-italic">
         {milestone.duration}
       </small>
     </div>
